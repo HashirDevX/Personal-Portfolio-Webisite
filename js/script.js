@@ -99,23 +99,21 @@ const form = document.getElementById("contactForm");
 
 form.addEventListener("submit", function (e) {
   e.preventDefault();
-  alert("thank you for form submission");
+  alert("Thank you for your submission!");
 
   const formData = new FormData(form);
-  const data = {};
-  formData.forEach((value, key) => {
-    data[key] = value;
-  });
 
   fetch("https://formsubmit.co/hashirraza200@gmail.com", {
     method: "POST",
-    headers: {
-      "Content-Type": "application/json",
-    },
-    body: JSON.stringify(data),
+    body: formData, // FormData directly, no JSON
   })
     .then((response) => {
-      console.log(form);
+      if (response.ok) {
+        alert("Form submitted successfully!");
+        form.reset(); // <-- Yahan form khali hota hai
+      } else {
+        alert("Form submission failed. Please try again.");
+      }
     })
     .catch((error) => {
       console.error("Error:", error);

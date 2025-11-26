@@ -1,0 +1,325 @@
+/* insert Google fonts using url */
+@import url("https://fonts.googleapis.com/css2?family=Bai+Jamjuree:ital,wght@0,200;0,300;0,400;0,500;0,600;0,700;1,200;1,300;1,400;1,500;1,600;1,700&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
+
+/* Reset margin and Padding */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+a {
+  text-decoration: none;
+}
+::selection {
+  color: var(--white-color);
+  background-color: var(--accents-color);
+}
+
+::-webkit-scrollbar-track {
+  background: var(--);
+}
+
+/* Default: Dark Theme */
+:root {
+  --primary-color: #0b0d17;
+  --secondary-color: #131621;
+  --accents-color: #557cff;
+  --cards-bg: #1b233c;
+  --text-color: #9fa4b5;
+  --white-color: #f5f7fa;
+  --headline-font: "Bai Jamjuree", sans-serif;
+  --paragraph-font: "Poppins", sans-serif;
+  --transition: all 0.3s ease-in-out;
+}
+
+.light-theme {
+  --primary-color: #f5f7fa;
+  --secondary-color: #eaeef5;
+  --accents-color: #3d5dff;
+  --cards-bg: #ffffff;
+  --text-color: #3a3d46;
+  --white-color: #0b0d17;
+}
+
+.themeToggle {
+  height: 3rem;
+  width: 3rem;
+  border-radius: 50%;
+  display: flex;
+  font-size: 1rem;
+  cursor: pointer;
+  align-items: center;
+  justify-content: center;
+  background: var(--accents-color);
+  border: none;
+  color: var(--white-color);
+  transition: var(--transition);
+}
+.themeToggle:hover,
+.light-theme .themeToggle:hover {
+  background-color: var(--secondary-color);
+  color: var(--accents-color);
+}
+.light-theme .themeToggle {
+  --white-color: #ffffff;
+  color: var(--white-color);
+}
+
+#mobileToggle.themeToggle{
+  display: none;
+}
+html,
+body {
+  overflow-x: hidden;
+  scroll-behavior: smooth;
+}
+
+.container {
+  max-width: 1200px;
+  width: 100%;
+  margin: auto;
+}
+.light-theme .fill-button {
+  --white-color: #fff;
+}
+
+.stroke-button {
+  padding: 15px 30px;
+  background-color: transparent;
+  font-size: 0.9rem;
+  text-transform: uppercase;
+  font-weight: 700;
+  color: var(--accents-color);
+  border: 2px solid var(--accents-color);
+  border-radius: 5px;
+  cursor: pointer;
+  transition: var(--transition);
+}
+
+.stroke-button:hover {
+  background-color: var(--accents-color);
+  color: var(--primary-color);
+  transition: var(--transition);
+}
+
+.fill-button {
+  position: relative;
+  padding: 15px 30px;
+  font-size: 1rem;
+  text-transform: uppercase;
+  font-weight: 700;
+  color: var(--white-color); /* text visible rahe */
+  background-color: var(--accents-color);
+  border-radius: 5px;
+  cursor: pointer;
+  transition: var(--transition);
+  outline: none;
+  overflow: hidden;
+  z-index: 1; /* text upar */
+  border: none;
+  border-radius: 50px;
+}
+
+.fill-button::before {
+  content: "";
+  position: absolute;
+  width: 100px;
+  height: 100%;
+  background-image: linear-gradient(
+    120deg,
+    rgba(255, 255, 255, 0) 30%,
+    rgba(255, 255, 255, 0.8),
+    rgba(255, 255, 255, 0) 70%
+  );
+  top: 0;
+  left: -100px;
+  opacity: 0.6;
+  z-index: 0; /* shine background me */
+}
+
+.fill-button:hover {
+  transform: scale(1.05);
+}
+
+.fill-button:hover::before {
+  animation: shine 1.5s ease-out infinite;
+}
+
+@keyframes shine {
+  0% {
+    left: -100px;
+  }
+  60% {
+    left: 100%;
+  }
+  to {
+    left: 100%;
+  }
+}
+
+/* animation  */
+@keyframes Image-Shadow {
+  from {
+    transform: translateY(0px) scale(1);
+  }
+
+  to {
+    transform: translateY(-5px) scale(1.01);
+  }
+}
+
+/* Loader Wrapper */
+#loader {
+  position: fixed;
+  inset: 0;
+  background-color: var(--primary-color);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  z-index: 9999;
+  opacity: 1;
+  transition: opacity 0.5s ease;
+}
+
+.loader-wrapper i {
+  font-size: 4rem;
+  color: var(--accents-color);
+  margin-bottom: 1rem;
+  animation: bounce 1.5s infinite alternate;
+  text-shadow: 0 0 10px var(--accents-color), 0 0 20px var(--accents-color);
+}
+
+/* Bounce Animation for Logo */
+@keyframes bounce {
+  0% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-15px);
+  }
+  100% {
+    transform: translateY(0);
+  }
+}
+
+/* Geometric Loader */
+.loader {
+  width: 44.8px;
+  height: 44.8px;
+  color: var(--accents-color);
+  position: relative;
+  background: radial-gradient(11.2px, currentColor 94%, #0000);
+  margin-top: 1rem;
+}
+
+.loader:before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  border-radius: 50%;
+  background: radial-gradient(10.08px at bottom right, #0000 94%, currentColor)
+      top left,
+    radial-gradient(10.08px at bottom left, #0000 94%, currentColor) top right,
+    radial-gradient(10.08px at top right, #0000 94%, currentColor) bottom left,
+    radial-gradient(10.08px at top left, #0000 94%, currentColor) bottom right;
+  background-size: 22.4px 22.4px;
+  background-repeat: no-repeat;
+  animation: loaderAnim 1.5s infinite cubic-bezier(0.3, 1, 0, 1);
+}
+
+@keyframes loaderAnim {
+  33% {
+    inset: -11.2px;
+    transform: rotate(0deg);
+  }
+
+  66% {
+    inset: -11.2px;
+    transform: rotate(90deg);
+  }
+
+  100% {
+    inset: 0;
+    transform: rotate(90deg);
+  }
+}
+
+/* ScrollBaar CSS */
+/* Default Dark Theme Scrollbar */
+::-webkit-scrollbar {
+  width: 10px;
+}
+
+::-webkit-scrollbar-track {
+  background: var(--secondary-color);
+}
+
+::-webkit-scrollbar-thumb {
+  background: var(--accents-color);
+  border-radius: 10px;
+  border: 2px solid var(--secondary-color);
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #6c8aff; /* slightly lighter accent */
+}
+/* Light Theme Scrollbar */
+.light-theme::-webkit-scrollbar-track {
+  background: #e1e5ee;
+}
+
+.light-theme::-webkit-scrollbar-thumb {
+  background: var(--accents-color);
+  border: 2px solid #e1e5ee;
+  border-radius: 10px;
+}
+
+.light-theme::-webkit-scrollbar-thumb:hover {
+  background: #2d4eff; /* darker hover accent */
+}
+
+/* Custom CUrsor */
+/* Hide default cursor */
+body,
+body * {
+  cursor: none;
+}
+
+/* Cursor Dot */
+.cursor-dot {
+  width: 8px;
+  height: 8px;
+  background: #557cff;
+  border-radius: 50%;
+  position: fixed;
+  top: 0;
+  left: 0;
+  pointer-events: none;
+  z-index: 9999;
+  transform: translate(-50%, -50%);
+}
+
+/* Cursor Outline */
+.cursor-outline {
+  width: 32px;
+  height: 32px;
+  border: 2px solid #557cff;
+  border-radius: 50%;
+  position: fixed;
+  top: 0;
+  left: 0;
+  pointer-events: none;
+  z-index: 9998;
+  transform: translate(-50%, -50%);
+  transition: all 0.15s ease-out;
+  mix-blend-mode: difference;
+}
+
+/* Cursor enlarge on hover of clickable items */
+a:hover ~ .cursor-outline,
+button:hover ~ .cursor-outline,
+.custom-hover:hover ~ .cursor-outline {
+  transform: translate(-50%, -50%) scale(1.7);
+  border-color: #ffffff;
+}

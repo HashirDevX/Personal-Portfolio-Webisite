@@ -1,0 +1,969 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="shortcut icon" href="img/Favicon.png" type="image/x-icon" />
+    <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
+    <link
+      href="https://cdn.jsdelivr.net/npm/remixicon@4.5.0/fonts/remixicon.css"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://unpkg.com/swiper/swiper-bundle.min.css"
+    />
+
+    <link rel="stylesheet" href="/css/style.css" />
+    <link rel="stylesheet" href="/css/utility.css" />
+    <link rel="stylesheet" href="/css/media-screen.css" />
+    <title>
+      Hashir Raza | Creative Frontend Developer & Modern Web Developer Portfolio
+    </title>
+  </head>
+  <body>
+    <!-- Loader Container -->
+    <div id="loader">
+      <div class="loader-wrapper">
+        <!-- <i class="ri-code-s-slash-fill"></i> -->
+        <div class="loader"></div>
+      </div>
+    </div>
+    <!-- Header -->
+    <header id="header">
+      <div data-aos="fade" data-aos-duration="3000" class="container">
+        <div class="logo">
+          <h1><i class="ri-code-s-slash-fill"></i>Hashir<span> Raza</span></h1>
+        </div>
+        <div style="display: flex; gap: 10px; align-items: center;">
+          <button class="themeToggle hide" id="mobileToggle">
+            <i class="ri-sun-line"></i>
+          </button>
+          <i id="menu" class="ri-menu-3-line hide"></i>
+        </div>
+        <nav id="navbar">
+          <a href="#hero">Home</a>
+          <a href="#About">About</a>
+          <a href="#Services">Services</a>
+          <a href="#Portfolio">Portfolio</a>
+          <a href="#Contact">Contact</a>
+          <a href="public/hashir raza.pdf" download=""
+            ><button class="fill-button">Download CV</button></a
+          >
+          <button class="themeToggle" id="themeToggle">
+            <i class="ri-sun-line"></i>
+          </button>
+        </nav>
+        <nav id="navbar-mobile">
+          <i id="close" class="ri-close-fill"></i>
+          <a href="#hero">Home</a>
+          <a href="#About">About</a>
+          <a href="#Services">Services</a>
+          <a href="#Portfolio">Portfolio</a>
+          <a href="#Contact">Contact</a>
+          <a href="public/hashir raza.pdf" download=""
+            ><button class="fill-button">Download CV</button></a
+          >
+        </nav>
+      </div>
+    </header>
+    <!-- Hero Section -->
+    <section id="hero">
+      <div class="container">
+        <div
+          data-aos="fade-right"
+          data-aos-duration="1000"
+          class="hero-content"
+        >
+          <h4><img src="img/Hello.gif" />Hello</h4>
+          <h1>
+            I'm Hashir Raza a <br />
+            <span id="role-changer">Web Developer</span>
+          </h1>
+          <p>
+            There are many ways to build the web, but the best ones combine
+            creativity with clean code. I'm a developer who believes in both.
+          </p>
+          <a href="#Portfolio"
+            ><button class="fill-button">View Portfolio</button></a
+          >
+        </div>
+        <div data-aos="fade-left" data-aos-duration="1000" class="hero-image">
+          <img src="/img/Profile-Pic.png" alt="My image" />
+        </div>
+      </div>
+    </section>
+    <!-- About Section -->
+    <section id="About">
+      <div class="container">
+        <div data-aos="fade-right" data-aos-duration="1000" class="About-img">
+          <img src="/img/Profile-pic.png" alt="My-image" />
+        </div>
+        <div
+          data-aos="fade-left"
+          data-aos-duration="1000"
+          class="About-content"
+        >
+          <h1>About <span>Me</span></h1>
+          <p>
+            I am a passionate and dedicated developer with expertise in creating
+            modern, responsive, and user-friendly websites. With a strong focus
+            on clean code, performance, and problem-solving, I strive to deliver
+            digital solutions that not only look great but also provide seamless
+            functionality. My goal is to combine creativity with technology to
+            build impactful projects that help businesses and individuals
+            achieve their vision.
+          </p>
+          <a href="#Contact"><button class="fill-button">Contact Me</button></a>
+        </div>
+      </div>
+    </section>
+    <!-- COunter Section -->
+    <section id="Counters">
+      <div class="container">
+        <div class="counter-wrapper">
+          <div
+            data-aos="fade-up"
+            data-aos-duration="1000"
+            data-aos-delay="0"
+            class="counterCard"
+            data-target="80"
+          >
+            <h1>80+</h1>
+            <p>Projects Delivered</p>
+          </div>
+          <div
+            data-aos="fade-up"
+            data-aos-duration="1000"
+            data-aos-delay="50"
+            class="counterCard"
+            data-target="5"
+          >
+            <h1>5+</h1>
+            <p>Years Experience</p>
+          </div>
+          <div
+            data-aos="fade-up"
+            data-aos-duration="1000"
+            data-aos-delay="100"
+            class="counterCard"
+            data-target="100"
+          >
+            <h1>100%</h1>
+            <p>Client Satisfaction</p>
+          </div>
+          <div
+            data-aos="fade-up"
+            data-aos-duration="1000"
+            data-aos-delay="150"
+            class="counterCard"
+            data-target="3000"
+          >
+            <h1>3000+</h1>
+            <p>Hours of Development</p>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!-- Services Section -->
+    <section id="Services">
+      <div class="container">
+        <div
+          data-aos="fade-up"
+          data-aos-duration="1000"
+          class="Services-content"
+        >
+          <h1><span>My </span>Services</h1>
+          <p>
+            I’m a dedicated developer skilled in building responsive websites,
+            sales funnels, and eCommerce platforms tailored to business needs. I
+            focus on clean design, strong performance, and modern UI/UX
+            practices to deliver smooth user experiences and complete digital
+            solutions that help brands grow.
+          </p>
+        </div>
+        <div class="Services-cards">
+          <div
+            class="Services-card-wrapper"
+            data-aos="fade-up"
+            data-aos-duration="1000"
+            data-aos-delay="0"
+          >
+            <div class="serviceCard">
+              <i class="ri-code-s-slash-line"></i>
+              <h3>Website Development Services</h3>
+              <p>
+                I deliver website development that meet your goals, using clean
+                code, strong structure, fast load times, and responsive layouts
+                across devices consistently.
+              </p>
+            </div>
+          </div>
+          <div
+            class="Services-card-wrapper"
+            data-aos="fade-up"
+            data-aos-duration="1000"
+            data-aos-delay="150"
+          >
+            <div class="serviceCard">
+              <i class="ri-filter-2-line"></i>
+              <h3>Optimized Sales Funnels</h3>
+              <p>
+                I deliver sales funnels that meet your goals, using clean code,
+                strong structure, fast load times, and responsive layouts across
+                devices consistently.
+              </p>
+            </div>
+          </div>
+          <div
+            class="Services-card-wrapper"
+            data-aos="fade-up"
+            data-aos-duration="1000"
+            data-aos-delay="300"
+          >
+            <div class="serviceCard">
+              <i class="ri-shopping-cart-line"></i>
+              <h3>E-Commerce Store Development</h3>
+              <p>
+                I deliver WordPress eCommerce stores tailored to your goals,
+                built with clean Design, solid structure, fast performance, and
+                responsive layouts for every device.
+              </p>
+            </div>
+          </div>
+          <div
+            class="Services-card-wrapper"
+            data-aos="fade-up"
+            data-aos-duration="1000"
+            data-aos-delay="450"
+          >
+            <div class="serviceCard">
+              <i class="ri-smartphone-line"></i>
+              <h3>Responsive Design Expertise</h3>
+              <p>
+                I deliver responsive design that meet your goals, using clean
+                code, strong structure, fast load times, and responsive layouts
+                across devices consistently.
+              </p>
+            </div>
+          </div>
+          <div
+            class="Services-card-wrapper"
+            data-aos="fade-up"
+            data-aos-duration="1000"
+            data-aos-delay="600"
+          >
+            <div class="serviceCard">
+              <i class="ri-speed-up-line"></i>
+              <h3>Speed Optimization Service</h3>
+              <p>
+                I deliver speed optimization that meet your goals, using clean
+                code, strong structure, fast load times, and responsive layouts
+                across devices consistently.
+              </p>
+            </div>
+          </div>
+          <div
+            class="Services-card-wrapper"
+            data-aos="fade-up"
+            data-aos-duration="1000"
+            data-aos-delay="750"
+          >
+            <div class="serviceCard">
+              <i class="ri-wordpress-fill"></i>
+              <h3>Professional WordPress Services</h3>
+              <p>
+                I deliver WordPress development that meet your goals, using
+                clean code, strong structure, fast load times, and responsive
+                layouts across devices consistently.
+              </p>
+            </div>
+          </div>
+        </div>
+        <div
+          data-aos="fade-up"
+          data-aos-duration="1000"
+          data-aos-delay="100"
+          class="centerButton"
+        >
+          <a href="#Contact"
+            ><button class="fill-button">Hire Me Now!</button></a
+          >
+        </div>
+      </div>
+    </section>
+    <!-- Skills Section -->
+    <section id="Skills">
+      <div class="container">
+        <div data-aos="fade-up" data-aos-duration="1000" class="skill-content">
+          <h1><span>My</span> Skills</h1>
+          <p>
+            I am a frontend developer skilled in crafting modern, responsive,
+            and visually appealing websites. I specialize in turning designs
+            into pixel-perfect interfaces using HTML, CSS, JavaScript, and
+            frameworks, with a focus on clean code, smooth animations, and a
+            seamless user experience across all devices.
+          </p>
+        </div>
+        <div class="skill-slider">
+          <div class="Skill-card-wrapper">
+            <div>
+              <div
+                data-aos="fade-up"
+                data-aos-duration="1000"
+                data-aos-delay="0"
+                class="card"
+                data-skill="HTML"
+                data-progress="90"
+                data-content="I create clean and semantic HTML structures that ensure proper layout, accessibility, and strong foundations for any website."
+              >
+                <img src="img/HTML.png" alt="HTML" />
+                <h3>HTML</h3>
+              </div>
+            </div>
+            <div>
+              <div
+                data-aos="fade-up"
+                data-aos-duration="1000"
+                data-aos-delay="50"
+                class="card"
+                data-skill="CSS"
+                data-progress="85"
+                data-content="I design responsive and modern interfaces using CSS, focusing on layouts, styling, and smooth user experience across all devices."
+              >
+                <img src="img/CSS.png" alt="CSS" />
+                <h3>CSS</h3>
+              </div>
+            </div>
+            <div>
+              <div
+                data-aos="fade-up"
+                data-aos-duration="1000"
+                data-aos-delay="100"
+                class="card"
+                data-skill="JavaScript"
+                data-progress="80"
+                data-content="I build dynamic and interactive features with JavaScript, enhancing websites with smooth functionality, logic, and user-friendly experiences."
+              >
+                <img src="img/JavaScript.png" alt="JS" />
+                <h3>JavaScript</h3>
+              </div>
+            </div>
+            <div>
+              <div
+                data-aos="fade-up"
+                data-aos-duration="1000"
+                data-aos-delay="150"
+                class="card"
+                data-skill="React"
+                data-progress="75"
+                data-content="I develop fast and scalable web applications with React, using components, hooks, and state management to deliver smooth user interfaces."
+              >
+                <img src="img/ReactJS.png" alt="React" />
+                <h3>React</h3>
+              </div>
+            </div>
+            <div>
+              <div
+                data-aos="fade-up"
+                data-aos-duration="1000"
+                data-aos-delay="200"
+                class="card"
+                data-skill="Git"
+                data-progress="88"
+                data-content="I use Git for efficient version control, managing code changes, collaborating on projects, and keeping workflows organized and reliable."
+              >
+                <img src="img/git.png" alt="Git" />
+                <h3>Git</h3>
+              </div>
+            </div>
+            <div>
+              <div
+                data-aos="fade-up"
+                data-aos-duration="1000"
+                data-aos-delay="250"
+                class="card"
+                data-skill="Bootstrap"
+                data-progress="75"
+                data-content="I create responsive and modern layouts quickly using Bootstrap, leveraging its grid system and components for faster development."
+              >
+                <img src="img/bootstrap.png" alt="Bootstrap" />
+                <h3>Bootstrap</h3>
+              </div>
+            </div>
+            <div>
+              <div
+                data-aos="fade-up"
+                data-aos-duration="1000"
+                data-aos-delay="300"
+                class="card"
+                data-skill="Tailwind"
+                data-progress="50"
+                data-content="I design custom, clean, and scalable interfaces with Tailwind CSS, focusing on flexibility, reusability, and optimized styling."
+              >
+                <img src="img/tailwind.png" alt="Tailwind" />
+                <h3>Tailwind</h3>
+              </div>
+            </div>
+            <div>
+              <div
+                data-aos="fade-up"
+                data-aos-duration="1000"
+                data-aos-delay="350"
+                class="card"
+                data-skill="WordPress"
+                data-progress="60"
+                data-content="I build professional and fully customizable websites with WordPress, focusing on speed, SEO, and user-friendly design."
+              >
+                <img src="img/WordPress.png" alt="WordPress" />
+                <h3>WordPress</h3>
+              </div>
+            </div>
+            <div>
+              <div
+                data-aos="fade-up"
+                data-aos-duration="1000"
+                data-aos-delay="400"
+                class="card"
+                data-skill="Gohighlevel"
+                data-progress="60"
+                data-content="I design and optimize funnels, websites, and automation in Go HighLevel, helping businesses generate leads and grow efficiently."
+              >
+                <img src="img/GohighLevel.png" alt="Gohighlevel" />
+                <h3>Gohighlevel</h3>
+              </div>
+            </div>
+            <div>
+              <div
+                data-aos="fade-up"
+                data-aos-duration="1000"
+                data-aos-delay="450"
+                class="card"
+                data-skill="Figma"
+                data-progress="60"
+                data-content="I design clean, modern, and user-friendly UI/UX prototypes in Figma, ensuring seamless collaboration and pixel-perfect layouts."
+              >
+                <img src="img/Figma.png" alt="Figma" />
+                <h3>Figma</h3>
+              </div>
+            </div>
+            <div>
+              <div
+                data-aos="fade-up"
+                data-aos-duration="1000"
+                data-aos-delay="500"
+                class="card"
+                data-skill="GSAP"
+                data-progress="60"
+                data-content="I create smooth, engaging, and high-performance animations with GSAP, enhancing websites with interactive and dynamic effects."
+              >
+                <img src="img/GSAP.svg" alt="GSAP" />
+                <h3>GSAP</h3>
+              </div>
+            </div>
+            <div>
+              <div
+                data-aos="fade-up"
+                data-aos-duration="1000"
+                data-aos-delay="550"
+                class="card"
+                data-skill="Click Funnel"
+                data-progress="60"
+                data-content="I create smooth, engaging, and high-performance animations with GSAP, enhancing websites with interactive and dynamic effects."
+              >
+                <img src="img/Click Funnel.png" alt="GSAP" />
+                <h3>Click Funnel</h3>
+              </div>
+            </div>
+          </div>
+        </div>
+        <!-- Here the button of Skills Section on the bottom of slider -->
+        <div class="button-skill-container">
+          <a href="#Contact"><button class="fill-button">Contact Me</button></a>
+        </div>
+      </div>
+    </section>
+    <!-- Portfolio Section -->
+    <section id="Portfolio">
+      <div class="container">
+        <div
+          data-aos="fade-up"
+          data-aos-duration="1000"
+          class="Portfolio-content"
+        >
+          <h1><span>My Featured</span> Portfolio</h1>
+          <p>
+            In every project, I focus on building interfaces that are visually
+            polished, technically solid, and optimized for real-world use. From
+            responsive websites to sales funnels and eCommerce platforms, my
+            work reflects a blend of clean code, modern UI/UX principles, and
+            attention to detail. Here is a selection of projects that
+            demonstrate my approach to creating seamless, high-performance
+            digital solutions.
+          </p>
+        </div>
+        <div
+          data-aos="fade-up"
+          data-aos-duration="1000"
+          data-aos-delay="100"
+          class="swiper funnel-slider"
+        >
+          <div class="swiper-wrapper">
+            <!-- Slide 1 -->
+            <div
+              class="swiper-slide"
+              data-image="./img/projects//Youthful MD.png"
+              data-title="Fitness Funnel"
+            >
+              <div class="image-wrapper">
+                <img
+                  class="scroll-on-hover"
+                  src="./img/projects//Youthful MD.png"
+                  alt="Fitness Funnel"
+                />
+                <button class="view-btn">
+                  <i class="fas fa-eye"></i> View Full Size
+                </button>
+              </div>
+            </div>
+
+            <!-- Slide 2 -->
+            <div
+              class="swiper-slide"
+              data-image="./img/projects//E.V.V.A Voice Ai.png"
+              data-title="Fitness Funnel"
+            >
+              <div class="image-wrapper">
+                <img
+                  class="scroll-on-hover"
+                  src="./img/projects//E.V.V.A Voice Ai.png"
+                  alt="Fitness Funnel"
+                />
+                <button class="view-btn">
+                  <i class="fas fa-eye"></i> View Full Size
+                </button>
+              </div>
+            </div>
+
+            <!-- Slide 3 -->
+            <div
+              class="swiper-slide"
+              data-image="./img/projects//Welhus studio.png"
+              data-title="Fitness Funnel"
+            >
+              <div class="image-wrapper">
+                <img
+                  class="scroll-on-hover"
+                  src="./img/projects//Welhus studio.png"
+                  alt="Fitness Funnel"
+                />
+                <button class="view-btn">
+                  <i class="fas fa-eye"></i> View Full Size
+                </button>
+              </div>
+            </div>
+
+            <!-- Slide 4 -->
+            <div
+              class="swiper-slide"
+              data-image="./img/projects//Wayne Valay Animal Hospital.png"
+              data-title="Fitness Funnel"
+            >
+              <div class="image-wrapper">
+                <img
+                  class="scroll-on-hover"
+                  src="./img/projects//Wayne Valay Animal Hospital.png"
+                  alt="Fitness Funnel"
+                />
+                <button class="view-btn">
+                  <i class="fas fa-eye"></i> View Full Size
+                </button>
+              </div>
+            </div>
+
+            <!-- Slide 5 -->
+            <div
+              class="swiper-slide"
+              data-image="./img/projects//Mechenical Crop.png"
+              data-title="Fitness Funnel"
+            >
+              <div class="image-wrapper">
+                <img
+                  class="scroll-on-hover"
+                  src="./img/projects//Mechenical Crop.png"
+                  alt="Fitness Funnel"
+                />
+                <button class="view-btn">
+                  <i class="fas fa-eye"></i> View Full Size
+                </button>
+              </div>
+            </div>
+
+            <!-- Slide 6 -->
+            <div
+              class="swiper-slide"
+              data-image="./img/projects//Vratans Benefits center.png"
+              data-title="Fitness Funnel"
+            >
+              <div class="image-wrapper">
+                <img
+                  class="scroll-on-hover"
+                  src="./img/projects//Vratans Benefits center.png"
+                  alt="Fitness Funnel"
+                />
+                <button class="view-btn">
+                  <i class="fas fa-eye"></i> View Full Size
+                </button>
+              </div>
+            </div>
+
+            <!-- Slide 7 -->
+            <div
+              class="swiper-slide"
+              data-image="./img/projects//Aquasition.png"
+              data-title="Fitness Funnel"
+            >
+              <div class="image-wrapper">
+                <img
+                  class="scroll-on-hover"
+                  src="./img/projects//Aquasition.png"
+                  alt="Fitness Funnel"
+                />
+                <button class="view-btn">
+                  <i class="fas fa-eye"></i> View Full Size
+                </button>
+              </div>
+            </div>
+
+            <!-- Slide 8 -->
+            <div
+              class="swiper-slide"
+              data-image="./img/projects//Lawdingo.png"
+              data-title="Fitness Funnel"
+            >
+              <div class="image-wrapper">
+                <img
+                  class="scroll-on-hover"
+                  src="./img/projects//Lawdingo.png"
+                  alt="Fitness Funnel"
+                />
+                <button class="view-btn">
+                  <i class="fas fa-eye"></i> View Full Size
+                </button>
+              </div>
+            </div>
+
+            <!-- Slide 9 -->
+            <div
+              class="swiper-slide"
+              data-image="./img/projects//Champion Life.png"
+              data-title="Fitness Funnel"
+            >
+              <div class="image-wrapper">
+                <img
+                  class="scroll-on-hover"
+                  src="./img/projects//Champion Life.png"
+                  alt="Fitness Funnel"
+                />
+                <button class="view-btn">
+                  <i class="fas fa-eye"></i> View Full Size
+                </button>
+              </div>
+            </div>
+
+            <!-- Slide 10 -->
+            <div
+              class="swiper-slide"
+              data-image="./img/projects//Championlife CRM.png"
+              data-title="Fitness Funnel"
+            >
+              <div class="image-wrapper">
+                <img
+                  class="scroll-on-hover"
+                  src="./img/projects//Championlife CRM.png"
+                  alt="Fitness Funnel"
+                />
+                <button class="view-btn">
+                  <i class="fas fa-eye"></i> View Full Size
+                </button>
+              </div>
+            </div>
+
+            <!-- Slide 11 -->
+            <div
+              class="swiper-slide"
+              data-image="./img/projects//Heyday.png"
+              data-title="Fitness Funnel"
+            >
+              <div class="image-wrapper">
+                <img
+                  class="scroll-on-hover"
+                  src="./img/projects//Heyday.png"
+                  alt="Fitness Funnel"
+                />
+                <button class="view-btn">
+                  <i class="fas fa-eye"></i> View Full Size
+                </button>
+              </div>
+            </div>
+
+            <!-- Slide 12 -->
+            <div
+              class="swiper-slide"
+              data-image="./img/projects//Create KAE.png"
+              data-title="Fitness Funnel"
+            >
+              <div class="image-wrapper">
+                <img
+                  class="scroll-on-hover"
+                  src="./img/projects//Create KAE.png"
+                  alt="Fitness Funnel"
+                />
+                <button class="view-btn">
+                  <i class="fas fa-eye"></i> View Full Size
+                </button>
+              </div>
+            </div>
+
+            <!-- Slide 13 -->
+            <div
+              class="swiper-slide"
+              data-image="./img/projects//CRS Builders.png"
+              data-title="Fitness Funnel"
+            >
+              <div class="image-wrapper">
+                <img
+                  class="scroll-on-hover"
+                  src="./img/projects//CRS Builders.png"
+                  alt="Fitness Funnel"
+                />
+                <button class="view-btn">
+                  <i class="fas fa-eye"></i> View Full Size
+                </button>
+              </div>
+            </div>
+
+            <!-- last DIV Wrapper -->
+          </div>
+
+          <!-- Swiper navigation -->
+          <div class="swiper-button-next"></div>
+          <div class="swiper-button-prev"></div>
+        </div>
+      </div>
+
+      <!-- Modal -->
+      <div class="modal" id="imageModal">
+        <button class="close-btn" id="closeModal">×</button>
+        <div class="modal-content">
+          <img id="modalImage" src="" alt="Full Funnel Preview" />
+        </div>
+      </div>
+    </section>
+    <!-- Contact section -->
+    <section id="Contact">
+      <div class="container">
+        <div data-aos="fade-right" data-aos-duration="1000" class="contactInfo">
+          <h4>Contact</h4>
+          <h1>Get in <span>Touch</span> With Me</h1>
+          <p>
+            Feel free to reach out for projects, collaborations, or any
+            questions. I’m always open to connecting and discussing new
+            opportunities.
+          </p>
+          <div class="IconsWrapper">
+            <div class="iconsCard">
+              <img src="img/email.png" />
+              <div class="iconsContent">
+                <h1>Email:</h1>
+                <a href="mailto:hashirraza200@gmail.com">
+                  <p>hashirraza200@gmail.com</p>
+                </a>
+              </div>
+            </div>
+            <div class="iconsCard">
+              <img src="img/phone.png" />
+              <div class="iconsContent">
+                <h1>Phone:</h1>
+                <a href="tel:+923232086800">
+                  <p>+923 23208 6800</p>
+                </a>
+              </div>
+            </div>
+            <div class="iconsCard">
+              <img src="img/location-pin.png" />
+              <div class="iconsContent">
+                <h1>Location:</h1>
+                <a
+                  target="_blank"
+                  href="https://maps.app.goo.gl/N2RMtK6GA66VbY3w8"
+                >
+                  <p>
+                    New Kumbhar Wara Rd, Hari Masjid St, Lyari, Karachi, 75660,
+                    Pakistan
+                  </p>
+                </a>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div data-aos="fade-left" data-aos-duration="1000" class="contactForm">
+          <form id="contactForm">
+            <div class="form-row">
+              <div class="form-group">
+                <label for="firstName">First Name</label>
+                <input
+                  type="text"
+                  name="firstName"
+                  id="firstName"
+                  placeholder="First Name"
+                  required
+                />
+              </div>
+              <div class="form-group">
+                <label for="lastName">Last Name</label>
+                <input
+                  type="text"
+                  name="lastName"
+                  id="lastName"
+                  placeholder="Last Name"
+                  required
+                />
+              </div>
+            </div>
+
+            <div class="form-row">
+              <div class="form-group">
+                <label for="email">Email Address</label>
+                <input
+                  type="email"
+                  name="email"
+                  id="email"
+                  placeholder="Enter your Email Address"
+                  required
+                />
+              </div>
+              <div class="form-group">
+                <label for="phone">Phone Number</label>
+                <input
+                  type="tel"
+                  name="phone"
+                  id="phone"
+                  placeholder="Enter your Phone Number"
+                  required
+                />
+              </div>
+            </div>
+
+            <div class="form-group">
+              <label for="message">Message</label>
+              <textarea
+                name="message"
+                id="message"
+                placeholder="Describe your project or message here..."
+                required
+              ></textarea>
+            </div>
+
+            <button type="submit">Send Message</button>
+          </form>
+        </div>
+      </div>
+    </section>
+    <!-- Footer -->
+    <footer id="footer">
+      <div
+        data-aos="fade"
+        data-aos-duration="1000"
+        data-aos-delay="0"
+        class="container"
+      >
+        <div class="f-contant">
+          <div class="F-logo">
+            <h1>
+              <i class="ri-code-s-slash-fill"></i>Hashir<span> Raza</span>
+            </h1>
+            <p>
+              Your partner in digital growth. From custom frontend development
+              to optimized sales funnels and WordPress solutions, I deliver
+              pixel-perfect projects tailored to meet your specific needs.
+            </p>
+            <div class="socialIcons-container">
+              <a
+                href="https://www.facebook.com/hashir.raza.81288"
+                target="_blank"
+                class="social-icon"
+                ><i class="ri-facebook-fill"></i
+              ></a>
+              <a
+                href="https://www.instagram.com/hashirraza.dev"
+                target="_blank"
+                class="social-icon"
+                ><i class="ri-instagram-line"></i
+              ></a>
+              <a
+                href="https://github.com/HashirDevX"
+                target="_blank"
+                class="social-icon"
+                ><i class="ri-github-fill"></i
+              ></a>
+              <a
+                href="https://www.linkedin.com/in/hashir-raza-developer"
+                target="_blank"
+                class="social-icon"
+                ><i class="ri-linkedin-fill"></i
+              ></a>
+            </div>
+          </div>
+          <div class="quick-links">
+            <h4>Quick Links</h4>
+            <a href="#hero">Home</a>
+            <a href="#About">About</a>
+            <a href="#Services">Services</a>
+            <a href="#Skills">Skills</a>
+            <a href="#Portfolio">Portfolio</a>
+            <a href="#Contact">Contact</a>
+          </div>
+          <div class="F-services">
+            <h4>Services</h4>
+            <a href="#Services">Website Development </a>
+            <a href="#Services">Optimized Sales Funnels</a>
+            <a href="#Services">E-Commerce Store </a>
+            <a href="#Services">Responsive Design </a>
+            <a href="#Services">Speed Optimization </a>
+            <a href="#Services">Professional WordPress </a>
+          </div>
+          <div class="getInTouch">
+            <h4>Contact Info</h4>
+            <a href="tel:+923232086800"
+              ><i class="ri-phone-fill"></i>+923 23208 6800</a
+            >
+            <a href="mailto:hashirraza200@gmail.com"
+              ><i class="ri-mail-fill"></i>hashirraza200@gmail.com</a
+            >
+            <a href="https://maps.app.goo.gl/N2RMtK6GA66VbY3w8"
+              ><i class="ri-map-pin-fill"></i>New Kumbhar Wara Rd, Hari Masjid
+              St, Lyari, Karachi, 75660, Pakistan</a
+            >
+          </div>
+        </div>
+        <div class="copyright">
+          <p>&copy; 2025 Hashir Raza Portfolio All right reservrd.</p>
+          <a href="#header">
+            <button class="fill-button" id="backtoTop">
+              <i class="ri-arrow-up-line"></i></button
+          ></a>
+        </div>
+      </div>
+    </footer>
+    <!-- Cursor HTML -->
+    <div class="cursor-dot"></div>
+    <div class="cursor-outline"></div>
+
+    <!-- Cdns and JS links -->
+    <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+    <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/typed.js@2.0.12"></script>
+    <script src="js/script.js"></script>
+  </body>
+</html>

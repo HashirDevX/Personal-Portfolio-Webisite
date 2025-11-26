@@ -99,6 +99,7 @@ const form = document.getElementById("contactForm");
 
 form.addEventListener("submit", function (e) {
   e.preventDefault();
+  alert("thank you for form submission");
 
   const formData = new FormData(form);
   const data = {};
@@ -121,7 +122,7 @@ form.addEventListener("submit", function (e) {
       alert("There was an error sending your message. Please try again.");
     });
 });
-// Form Data to your Gmail Start here!
+// Form Data to your Gmail ends here!
 
 // COunter js is here
 let started = false;

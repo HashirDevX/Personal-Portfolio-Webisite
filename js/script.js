@@ -9,7 +9,7 @@ closer.addEventListener("click", function () {
 });
 
 const API_URL = "{{ SERVICE_ID }}";
-console.log(API_URL);
+console.log("checking", API_URL);
 
 
 

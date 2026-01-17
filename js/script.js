@@ -8,7 +8,9 @@ closer.addEventListener("click", function () {
   mobileNav.style.right = "-100%";
 });
 
-console.log("{{ SERVICE_ID }}");
+const API_URL = "{{ SERVICE_ID }}";
+console.log(API_URL);
+
 
 
 // Typing Animation Js Start Here!

@@ -8,6 +8,8 @@ closer.addEventListener("click", function () {
   mobileNav.style.right = "-100%";
 });
 
+console.log("{{ SERVICE_ID }}");
+
 
 // Typing Animation Js Start Here!
 

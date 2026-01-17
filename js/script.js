@@ -8,6 +8,7 @@ closer.addEventListener("click", function () {
   mobileNav.style.right = "-100%";
 });
 
+
 // Typing Animation Js Start Here!
 
 var typed = new Typed("#role-changer", {
@@ -95,31 +96,48 @@ document.addEventListener("keydown", (e) => {
 
 // Form Data to your Gmail Start here!
 
+
+(function () {
+  emailjs.init("FtpwsYD9AJjG-GPgx"); // Public Key
+})();
+
 const form = document.getElementById("contactForm");
 
-form.addEventListener("submit", function (e) {
-  e.preventDefault();
-  alert("Thank you for your submission!");
+form.addEventListener("submit", function (event) {
+  event.preventDefault();
 
-  const formData = new FormData(form);
+  const serviceID = process.env.SERVICE_ID
+  const userTemplateID = process.env.USER_TEMPLATE_ID;     // User confirmation
+  const leadTemplateID = process.env.LEAD_TEMPLATE_ID;     // Admin / Lead
 
-  fetch("https://formsubmit.co/hashirraza200@gmail.com", {
-    method: "POST",
-    body: formData, // FormData directly, no JSON
-  })
-    .then((response) => {
-      if (response.ok) {
-        alert("Form submitted successfully!");
-        form.reset(); // <-- Yahan form khali hota hai
-      } else {
-        alert("Form submission failed. Please try again.");
-      }
+  const formData = {
+    firstName: document.getElementById("firstName").value,
+    lastName: document.getElementById("lastName").value,
+    email: document.getElementById("email").value,
+    phone: document.getElementById("phone").value,
+    message: document.getElementById("message").value,
+  };
+
+  // 🔹 Admin Email (Lead)
+  emailjs.send(serviceID, leadTemplateID, formData)
+    .then(() => {
+      console.log("✅ Lead Email Sent");
     })
     .catch((error) => {
-      console.error("Error:", error);
-      alert("There was an error sending your message. Please try again.");
+      console.error("❌ Lead Email Error:", error);
+    });
+
+  // 🔹 User Email
+  emailjs.send(serviceID, userTemplateID, formData)
+    .then(() => {
+      alert("✅ Thank you! Your message has been sent.");
+      form.reset();
+    })
+    .catch((error) => {
+      console.error("❌ User Email Error:", error);
     });
 });
+
 // Form Data to your Gmail ends here!
 
 // COunter js is here
@@ -165,37 +183,32 @@ document.addEventListener("aos:in", (event) => {
 // Loader JS (minimum 2 sec)
 window.addEventListener("load", () => {
   const loader = document.getElementById("loader");
-  const content = document.getElementById("page-content");
 
   setTimeout(() => {
     loader.style.opacity = 0;
     setTimeout(() => {
       loader.style.display = "none";
-      content.style.display = "block";
-      setTimeout(() => {
-        content.style.opacity = 1;
-      }, 50);
     }, 500);
   }, 3000); // minimum loader time
 });
 
 const toggle = document.querySelectorAll(".themeToggle");
 
-toggle.forEach((TL)=>{
-TL.addEventListener("click", () => {
-  document.body.classList.toggle("light-theme");
+toggle.forEach((TL) => {
+  TL.addEventListener("click", () => {
+    document.body.classList.toggle("light-theme");
 
-  // Save preference
-  if (document.body.classList.contains("light-theme")) {
-    TL.innerHTML = `<i class="ri-moon-clear-line"></i>`;
+    // Save preference
+    if (document.body.classList.contains("light-theme")) {
+      TL.innerHTML = `<i class="ri-moon-clear-line"></i>`;
 
-    localStorage.setItem("theme", "light");
-  } else {
-    TL.innerHTML = `<i class="ri-sun-line"></i>`;
+      localStorage.setItem("theme", "light");
+    } else {
+      TL.innerHTML = `<i class="ri-sun-line"></i>`;
 
-    localStorage.setItem("theme", "dark");
-  }
-});
+      localStorage.setItem("theme", "dark");
+    }
+  });
 
 })
 

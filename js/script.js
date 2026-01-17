@@ -110,9 +110,9 @@ const form = document.getElementById("contactForm");
 form.addEventListener("submit", function (event) {
   event.preventDefault();
 
-  const serviceID = process.env.SERVICE_ID
-  const userTemplateID = process.env.USER_TEMPLATE_ID;     // User confirmation
-  const leadTemplateID = process.env.LEAD_TEMPLATE_ID;     // Admin / Lead
+  const serviceID = "V_SERVICE_ID"
+  const userTemplateID = "V_USER_TEMPLATE_ID";     // User confirmation
+  const leadTemplateID = "V_LEAD_TEMPLATE_ID";     // Admin / Lead
 
   const formData = {
     firstName: document.getElementById("firstName").value,
